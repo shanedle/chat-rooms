@@ -7,7 +7,7 @@ import { auth, db } from "@/firebase/config";
 
 import { chatProps } from "@/utils/types";
 
-export const ChatBox: FC = ({ scrollRef, id, chatType }: chatProps) => {
+export const ChatBox: FC<chatProps> = ({ scrollRef, id, chatType }) => {
   const [user] = useAuthState(auth);
   const messageRef = collection(db, `${chatType}`, id, "messages");
   const [chat, setChat] = useState("");

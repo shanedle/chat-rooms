@@ -9,7 +9,7 @@ import { chatProps } from "@/utils/types";
 
 import { Message } from "@/components/Message";
 
-export const ChatMessages: FC = ({ scrollRef, id, chatType }: chatProps) => {
+export const ChatMessages: FC<chatProps> = ({ scrollRef, id, chatType }) => {
   const [values] = useCollectionData(
     query(
       collection(db, `${chatType}`, id, "messages"),

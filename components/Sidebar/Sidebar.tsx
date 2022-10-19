@@ -22,7 +22,7 @@ import DirectMessage from "@/components/DirectMessage";
 
 import { ChatModal } from "@/components/ChatModal";
 
-export const Sidebar: FC = ({ fullWidth }: { fullWidth?: boolean }) => {
+export const Sidebar: FC<{ fullWidth?: boolean }> = ({ fullWidth }) => {
   const router = useRouter();
 
   const { colorMode, toggleColorMode } = useColorMode();

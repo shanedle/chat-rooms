@@ -30,7 +30,7 @@ import { auth, db } from "@/firebase/config";
 
 import { chatModalProps } from "@/utils/types";
 
-export const ChatModal: FC = ({ type, title }: chatModalProps) => {
+export const ChatModal: FC<chatModalProps> = ({ type, title }) => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [chatName, setChatName] = useState("");

@@ -9,7 +9,7 @@ import { auth, db } from "@/firebase/config";
 
 import { directMessageProps } from "@/utils/types";
 
-const ChatRooms: FC = ({ users, id }: directMessageProps) => {
+const ChatRooms: FC<directMessageProps> = ({ users, id }) => {
   const [user] = useAuthState(auth);
   const { colorMode } = useColorMode();
 

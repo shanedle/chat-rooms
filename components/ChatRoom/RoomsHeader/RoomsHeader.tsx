@@ -18,7 +18,7 @@ import { chatHeadertypes } from "@/utils/types";
 
 import { ChatModal } from "@/components/ChatModal";
 
-const RoomsHeader: FC = ({ chatData, user }: chatHeadertypes) => {
+const RoomsHeader: FC<chatHeadertypes> = ({ chatData, user }) => {
   const [isMobile] = useMediaQuery("(max-width: 680px)");
   const router = useRouter();
   const { colorMode } = useColorMode();
@@ -61,9 +61,7 @@ const RoomsHeader: FC = ({ chatData, user }: chatHeadertypes) => {
         </AvatarGroup>
       </Flex>
       <Box maxWidth="70%">
-        <Heading size={isMobile ? "md" : "lg"} isTruncated>
-          {chatData.roomName}
-        </Heading>
+        <Heading size={isMobile ? "md" : "lg"}>{chatData.roomName}</Heading>
         {!isMobile && <Text>{timeAgo}</Text>}
       </Box>
       <ChatModal type="addPeople" title="Add People" />

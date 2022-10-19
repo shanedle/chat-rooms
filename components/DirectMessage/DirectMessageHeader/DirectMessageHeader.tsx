@@ -18,7 +18,7 @@ import { db } from "@/firebase/config";
 
 import { chatHeadertypes } from "@/utils/types";
 
-const DirectMessageHeader: FC = ({ chatData, user }: chatHeadertypes) => {
+const DirectMessageHeader: FC<chatHeadertypes> = ({ chatData, user }) => {
   const { colorMode } = useColorMode();
 
   const router = useRouter();
@@ -72,9 +72,7 @@ const DirectMessageHeader: FC = ({ chatData, user }: chatHeadertypes) => {
         />
       )}
       <Box maxWidth="70%">
-        <Heading size="md" isTruncated>
-          {headingName}
-        </Heading>
+        <Heading size="md">{headingName}</Heading>
         <Text>{timeAgo}</Text>
       </Box>
     </Flex>

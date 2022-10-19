@@ -13,7 +13,7 @@ import { auth } from "@/firebase/config";
 
 import { chatRoomProps } from "@/utils/types";
 
-const ChatRooms: FC = ({ data, id }: chatRoomProps) => {
+const ChatRooms: FC<chatRoomProps> = ({ data, id }) => {
   const [user] = useAuthState(auth);
 
   const { colorMode } = useColorMode();

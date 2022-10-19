@@ -6,7 +6,7 @@ import { auth } from "@/firebase/config";
 
 import { messageProps } from "@/utils/types";
 
-export const Message: FC = ({ message, photoURL, id }: messageProps) => {
+export const Message: FC<messageProps> = ({ message, photoURL, id }) => {
   const { colorMode } = useColorMode();
   const [user] = useAuthState(auth);
   const { uid } = user;
