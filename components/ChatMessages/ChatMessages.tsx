@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { Box, Flex, VStack } from "@chakra-ui/react";
-import { collection, limit, orderBy, query, doc } from "firebase/firestore";
+import { Flex } from "@chakra-ui/react";
+import { collection, orderBy, query } from "firebase/firestore";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 
 import { db } from "@/firebase/config";
