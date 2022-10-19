@@ -1,4 +1,4 @@
-import { FC, useEffect } from "react";
+import { useEffect } from "react";
 import { AppProps } from "next/app";
 import { Center, ChakraProvider, Spinner } from "@chakra-ui/react";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
@@ -10,7 +10,7 @@ import theme from "@/theme";
 
 import { Auth } from "@/components/Auth";
 
-const MyApp: FC = ({ Component, pageProps }: AppProps) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   const [user, loading] = useAuthState(auth);
 
   useEffect(() => {

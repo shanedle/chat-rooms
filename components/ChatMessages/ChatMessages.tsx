@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { Flex } from "@chakra-ui/react";
 import { collection, orderBy, query } from "firebase/firestore";
 import { useCollectionData } from "react-firebase-hooks/firestore";
@@ -9,7 +8,7 @@ import { chatProps } from "@/utils/types";
 
 import { Message } from "@/components/Message";
 
-export const ChatMessages: FC<chatProps> = ({ scrollRef, id, chatType }) => {
+export const ChatMessages = ({ scrollRef, id, chatType }: chatProps) => {
   const [values] = useCollectionData(
     query(
       collection(db, `${chatType}`, id, "messages"),

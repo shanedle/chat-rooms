@@ -1,4 +1,4 @@
-import { FC, SyntheticEvent, useState } from "react";
+import { SyntheticEvent, useState } from "react";
 import { useRouter } from "next/router";
 import {
   Modal,
@@ -30,7 +30,7 @@ import { auth, db } from "@/firebase/config";
 
 import { chatModalProps } from "@/utils/types";
 
-export const ChatModal: FC<chatModalProps> = ({ type, title }) => {
+export const ChatModal = ({ type, title }: chatModalProps) => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [chatName, setChatName] = useState("");

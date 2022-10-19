@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { Box, Text, useColorMode } from "@chakra-ui/react";
 import { useAuthState } from "react-firebase-hooks/auth";
 
@@ -6,7 +5,7 @@ import { auth } from "@/firebase/config";
 
 import { messageProps } from "@/utils/types";
 
-export const Message: FC<messageProps> = ({ message, photoURL, id }) => {
+export const Message = ({ message, photoURL, id }: messageProps) => {
   const { colorMode } = useColorMode();
   const [user] = useAuthState(auth);
   const { uid } = user;

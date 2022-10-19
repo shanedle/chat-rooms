@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { useRouter } from "next/router";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import {
@@ -18,7 +17,7 @@ import { chatHeadertypes } from "@/utils/types";
 
 import { ChatModal } from "@/components/ChatModal";
 
-const RoomsHeader: FC<chatHeadertypes> = ({ chatData, user }) => {
+const RoomsHeader = ({ chatData, user }: chatHeadertypes) => {
   const [isMobile] = useMediaQuery("(max-width: 680px)");
   const router = useRouter();
   const { colorMode } = useColorMode();

@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { useRouter } from "next/router";
 import {
   Flex,
@@ -22,7 +21,7 @@ import DirectMessage from "@/components/DirectMessage";
 
 import { ChatModal } from "@/components/ChatModal";
 
-export const Sidebar: FC<{ fullWidth?: boolean }> = ({ fullWidth }) => {
+export const Sidebar = ({ fullWidth }: { fullWidth?: boolean }) => {
   const router = useRouter();
 
   const { colorMode, toggleColorMode } = useColorMode();

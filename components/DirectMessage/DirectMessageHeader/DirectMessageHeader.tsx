@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { useRouter } from "next/router";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import {
@@ -18,7 +17,7 @@ import { db } from "@/firebase/config";
 
 import { chatHeadertypes } from "@/utils/types";
 
-const DirectMessageHeader: FC<chatHeadertypes> = ({ chatData, user }) => {
+const DirectMessageHeader = ({ chatData, user }: chatHeadertypes) => {
   const { colorMode } = useColorMode();
 
   const router = useRouter();

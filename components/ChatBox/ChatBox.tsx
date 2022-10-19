@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 import { Button, Flex, FormControl, Input } from "@chakra-ui/react";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -7,7 +7,7 @@ import { auth, db } from "@/firebase/config";
 
 import { chatProps } from "@/utils/types";
 
-export const ChatBox: FC<chatProps> = ({ scrollRef, id, chatType }) => {
+export const ChatBox = ({ scrollRef, id, chatType }: chatProps) => {
   const [user] = useAuthState(auth);
   const messageRef = collection(db, `${chatType}`, id, "messages");
   const [chat, setChat] = useState("");

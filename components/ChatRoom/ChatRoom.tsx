@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { useRouter } from "next/router";
 import {
   Avatar,
@@ -13,7 +12,7 @@ import { auth } from "@/firebase/config";
 
 import { chatRoomProps } from "@/utils/types";
 
-const ChatRooms: FC<chatRoomProps> = ({ data, id }) => {
+const ChatRooms = ({ data, id }: chatRoomProps) => {
   const [user] = useAuthState(auth);
 
   const { colorMode } = useColorMode();

@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { useRouter } from "next/router";
 import { Avatar, Flex, Text, useColorMode } from "@chakra-ui/react";
 import { collection, query, where } from "firebase/firestore";
@@ -9,7 +8,7 @@ import { auth, db } from "@/firebase/config";
 
 import { directMessageProps } from "@/utils/types";
 
-const ChatRooms: FC<directMessageProps> = ({ users, id }) => {
+const ChatRooms = ({ users, id }: directMessageProps) => {
   const [user] = useAuthState(auth);
   const { colorMode } = useColorMode();
 

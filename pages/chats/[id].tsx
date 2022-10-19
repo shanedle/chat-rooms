@@ -1,4 +1,4 @@
-import { FC, useRef } from "react";
+import { useRef } from "react";
 import { useRouter } from "next/router";
 import { Flex, useMediaQuery } from "@chakra-ui/react";
 import { doc } from "firebase/firestore";
@@ -13,7 +13,7 @@ import { ChatBox } from "@/components/ChatBox";
 import { Sidebar } from "@/components/Sidebar";
 import { Container } from "@/components/Container";
 
-const Chatroom: FC = () => {
+const Chatroom = () => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");
   const [user] = useAuthState(auth);
   const router = useRouter();

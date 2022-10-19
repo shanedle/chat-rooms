@@ -1,8 +1,7 @@
-import { FC } from "react";
 import { useColorMode, Switch, Icon } from "@chakra-ui/react";
 import { IoMoon, IoSunny } from "react-icons/io5";
 
-export const DarkModeSwitch: FC = () => {
+export const DarkModeSwitch = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === "dark";
 

@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 import { IoLogoGoogle } from "react-icons/io5";
 import {
   Button,
@@ -24,7 +24,7 @@ import { auth, provider } from "@/firebase/config";
 
 import { DarkModeSwitch } from "@/components/DarkModeSwitch";
 
-export const Auth: FC = () => {
+export const Auth = () => {
   const [isMobile] = useMediaQuery("(max-width: 960px)");
   const { colorMode } = useColorMode();
 

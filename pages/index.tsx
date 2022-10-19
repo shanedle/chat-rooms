@@ -1,10 +1,9 @@
-import { FC } from "react";
 import { useMediaQuery } from "@chakra-ui/react";
 
 import { Container } from "@/components/Container";
 import { Sidebar } from "@/components/Sidebar";
 
-const Home: FC = () => {
+const Home = () => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");
 
   return (
