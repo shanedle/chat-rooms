@@ -1,5 +1,5 @@
 import { UserInfo } from "firebase/auth";
-import { DocumentData } from "firebase/firestore";
+import { DocumentData, Timestamp } from "firebase/firestore";
 
 export type chatProps = {
   id: string;
@@ -14,6 +14,7 @@ export type chatModalProps = {
 
 export type messageProps = {
   message: string;
+  //createdAt: Timestamp;
   photoURL?: string;
   id: string;
 };
