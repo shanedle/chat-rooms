@@ -19,8 +19,8 @@ import { ChatModal } from "@/components/ChatModal";
 
 const RoomsHeader = ({ chatData, user }: chatHeadertypes) => {
   const [isMobile] = useMediaQuery("(max-width: 680px)");
-  const router = useRouter();
   const { colorMode } = useColorMode();
+  const router = useRouter();
 
   const otherUsers = chatData.users?.filter(
     (singleUser) => user.email !== singleUser
@@ -47,14 +47,17 @@ const RoomsHeader = ({ chatData, user }: chatHeadertypes) => {
       direction="row"
     >
       <Flex align="center">
-        <IconButton
-          aria-label="Go Back"
-          icon={<ArrowBackIcon />}
-          mr="10px"
-          size="md"
-          onClick={() => router.push("/")}
-          isRound
-        />
+        {isMobile && (
+          <IconButton
+            aria-label="Go Back"
+            icon={<ArrowBackIcon />}
+            mr="10px"
+            size="md"
+            onClick={() => router.push("/")}
+            isRound
+          />
+        )}
+
         <AvatarGroup size="md" max={isMobile ? 1 : 4}>
           {userAvatars}
         </AvatarGroup>

@@ -77,8 +77,9 @@ export const ChatModal = ({ type, title }: chatModalProps) => {
     }
   };
 
-  const header = type === "room" ? "Create New Room" : "Add Person To Chat";
-  const placeHolder = type === "room" ? "Room Name" : "Email";
+  const header =
+    type === "room" ? "Create New Chat Room" : "Add Person To Chat";
+  const placeHolder = type === "room" ? "Chat Room Name" : "Email";
   return (
     <>
       <Button size={isMobile ? "lg" : "md"} onClick={onOpen}>
@@ -107,7 +108,7 @@ export const ChatModal = ({ type, title }: chatModalProps) => {
             </Button>
             <Button onClick={handleSubmit} variant="ghost">
               {type === "room"
-                ? "Create Room"
+                ? "Create Chat Room"
                 : type === "addPeople"
                 ? "Add Person"
                 : "Create Chat"}

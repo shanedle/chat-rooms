@@ -8,6 +8,7 @@ import {
   IconButton,
   Text,
   useColorMode,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { formatDistanceToNowStrict } from "date-fns";
 import { collection, query, where } from "firebase/firestore";
@@ -18,8 +19,8 @@ import { db } from "@/firebase/config";
 import { chatHeadertypes } from "@/utils/types";
 
 const DirectMessageHeader = ({ chatData, user }: chatHeadertypes) => {
+  const [isMobile] = useMediaQuery("(max-width: 680px)");
   const { colorMode } = useColorMode();
-
   const router = useRouter();
 
   const filtered = chatData?.users?.filter(
@@ -49,14 +50,16 @@ const DirectMessageHeader = ({ chatData, user }: chatHeadertypes) => {
       borderColor={colorMode === "light" ? "gray.200" : "gray.700"}
       maxWidth="100%"
     >
-      <IconButton
-        aria-label="Go Back"
-        icon={<ArrowBackIcon />}
-        mr="10px"
-        size="md"
-        onClick={() => router.push("/")}
-        isRound
-      />
+      {isMobile && (
+        <IconButton
+          aria-label="Go Back"
+          icon={<ArrowBackIcon />}
+          mr="10px"
+          size="md"
+          onClick={() => router.push("/")}
+          isRound
+        />
+      )}
       {foundUser?.length ? (
         <Avatar
           mr={4}
