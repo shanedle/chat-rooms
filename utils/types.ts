@@ -8,7 +8,7 @@ export type chatProps = {
 };
 
 export type chatModalProps = {
-  type: "room" | "chat" | "addPeople";
+  type: "room" | "chat" | "addPerson";
   title: string;
 };
 

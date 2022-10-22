@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button, Flex, FormControl, Input } from "@chakra-ui/react";
+import { IoSend } from "react-icons/io5";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 
@@ -44,7 +45,12 @@ export const ChatBox = ({ scrollRef, id, chatType }: chatProps) => {
           onChange={handleChange}
           placeholder="Type your message here..."
         />
-        <Button size="lg" type="submit" onClick={sendMessage}>
+        <Button
+          leftIcon={<IoSend />}
+          size="lg"
+          type="submit"
+          onClick={sendMessage}
+        >
           Send
         </Button>
       </FormControl>

@@ -69,7 +69,7 @@ export const ChatModal = ({ type, title }: chatModalProps) => {
           setIsValid(false);
         }
         break;
-      case "addPeople":
+      case "addPerson":
         await updateDoc(doc(db, "rooms", id.toString()), {
           users: arrayUnion(chatName),
         });
@@ -109,7 +109,7 @@ export const ChatModal = ({ type, title }: chatModalProps) => {
             <Button onClick={handleSubmit} variant="ghost">
               {type === "room"
                 ? "Create Chat Room"
-                : type === "addPeople"
+                : type === "addPerson"
                 ? "Add Person"
                 : "Create Chat"}
             </Button>

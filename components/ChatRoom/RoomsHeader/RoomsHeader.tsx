@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import { ArrowBackIcon } from "@chakra-ui/icons";
 import {
   Avatar,
   AvatarGroup,
@@ -11,6 +10,7 @@ import {
   useColorMode,
   useMediaQuery,
 } from "@chakra-ui/react";
+import { IoArrowBack } from "react-icons/io5";
 import { formatDistanceToNowStrict } from "date-fns";
 
 import { chatHeadertypes } from "@/utils/types";
@@ -50,7 +50,7 @@ const RoomsHeader = ({ chatData, user }: chatHeadertypes) => {
         {isMobile && (
           <IconButton
             aria-label="Go Back"
-            icon={<ArrowBackIcon />}
+            icon={<IoArrowBack />}
             mr="10px"
             size="md"
             onClick={() => router.push("/")}
@@ -66,7 +66,7 @@ const RoomsHeader = ({ chatData, user }: chatHeadertypes) => {
         <Heading size={isMobile ? "md" : "lg"}>{chatData.roomName}</Heading>
         {!isMobile && <Text>{timeAgo}</Text>}
       </Box>
-      <ChatModal type="addPeople" title="Add People" />
+      <ChatModal type="addPerson" title="Add Person" />
     </Flex>
   );
 };
