@@ -6,7 +6,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 import { auth, db } from "@/firebase/config";
 
-import theme from "@/theme";
+import theme from "@/lib/theme";
 
 import { Auth } from "@/components/Auth";
 
