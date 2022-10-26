@@ -91,8 +91,8 @@ export const Sidebar = ({ fullWidth }: { fullWidth?: boolean }) => {
         {chats}
       </Stack>
       <HStack justify="space-between" p="10px">
-        <ChatModal type="room" title="Create New Room" />
-        <ChatModal type="chat" title="Create DM" />
+        <ChatModal type="room" title="Create a Chat Room" />
+        <ChatModal type="chat" title="Start a Chat" />
       </HStack>
     </Flex>
   );

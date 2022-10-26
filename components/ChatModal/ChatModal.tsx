@@ -77,8 +77,7 @@ export const ChatModal = ({ type, title }: chatModalProps) => {
     }
   };
 
-  const header =
-    type === "room" ? "Create New Chat Room" : "Add Person To Chat";
+  const header = type === "room" ? "Create a Chat Room" : "Start a Chat";
   const placeHolder = type === "room" ? "Chat Room Name" : "Email";
   return (
     <>
