@@ -22,7 +22,7 @@ import {
 
 import { auth, provider } from "@/firebase/config";
 
-import { DarkModeSwitch } from "@/components/DarkModeSwitch";
+import { ThemeToggleButton } from "@/components/ThemeToggleButton";
 
 export const Auth = () => {
   const [isMobile] = useMediaQuery("(max-width: 960px)");
@@ -206,7 +206,7 @@ export const Auth = () => {
           </>
         </Flex>
       </Flex>
-      <DarkModeSwitch />
+      <ThemeToggleButton />
     </Flex>
   );
 };

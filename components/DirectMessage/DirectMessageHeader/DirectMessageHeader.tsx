@@ -16,9 +16,9 @@ import { useCollectionData } from "react-firebase-hooks/firestore";
 
 import { db } from "@/firebase/config";
 
-import { chatHeadertypes } from "@/utils/types";
+import { ChatHeaderProps } from "@/types";
 
-const DirectMessageHeader = ({ chatData, user }: chatHeadertypes) => {
+const DirectMessageHeader = ({ chatData, user }: ChatHeaderProps) => {
   const [isMobile] = useMediaQuery("(max-width: 680px)");
   const { colorMode } = useColorMode();
   const router = useRouter();

@@ -10,9 +10,9 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 import { auth } from "@/firebase/config";
 
-import { chatRoomProps } from "@/utils/types";
+import { ChatRoomProps } from "@/types";
 
-const ChatRooms = ({ data, id }: chatRoomProps) => {
+const ChatRooms = ({ data, id }: ChatRoomProps) => {
   const [user] = useAuthState(auth);
 
   const { colorMode } = useColorMode();

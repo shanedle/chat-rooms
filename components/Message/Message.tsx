@@ -3,9 +3,9 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 import { auth } from "@/firebase/config";
 
-import { messageProps } from "@/utils/types";
+import { MessageProps } from "@/types";
 
-export const Message = ({ message, photoURL, id }: messageProps) => {
+export const Message = ({ message, photoURL, id }: MessageProps) => {
   const { colorMode } = useColorMode();
 
   const [user] = useAuthState(auth);

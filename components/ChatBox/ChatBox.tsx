@@ -6,9 +6,9 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 import { auth, db } from "@/firebase/config";
 
-import { chatProps } from "@/utils/types";
+import { ChatProps } from "@/types";
 
-export const ChatBox = ({ scrollRef, id, chatType }: chatProps) => {
+export const ChatBox = ({ scrollRef, id, chatType }: ChatProps) => {
   const [user] = useAuthState(auth);
   const messageRef = collection(db, `${chatType}`, id, "messages");
   const [chat, setChat] = useState("");

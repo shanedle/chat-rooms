@@ -13,11 +13,11 @@ import {
 import { IoArrowBack } from "react-icons/io5";
 import { formatDistanceToNowStrict } from "date-fns";
 
-import { chatHeadertypes } from "@/utils/types";
+import { ChatHeaderProps } from "@/types";
 
 import { ChatModal } from "@/components/ChatModal";
 
-const RoomsHeader = ({ chatData, user }: chatHeadertypes) => {
+const RoomsHeader = ({ chatData, user }: ChatHeaderProps) => {
   const [isMobile] = useMediaQuery("(max-width: 680px)");
   const { colorMode } = useColorMode();
   const router = useRouter();

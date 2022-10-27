@@ -28,9 +28,9 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 import { auth, db } from "@/firebase/config";
 
-import { chatModalProps } from "@/utils/types";
+import { ChatModalProps } from "@/types";
 
-export const ChatModal = ({ type, title }: chatModalProps) => {
+export const ChatModal = ({ type, title }: ChatModalProps) => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [chatName, setChatName] = useState("");
@@ -77,7 +77,7 @@ export const ChatModal = ({ type, title }: chatModalProps) => {
     }
   };
 
-  const header = type === "room" ? "Create a Chat Room" : "Start a Chat";
+  const header = type === "room" ? "Create a Chat Room" : "Add Person To Chat";
   const placeHolder = type === "room" ? "Chat Room Name" : "Email";
   return (
     <>

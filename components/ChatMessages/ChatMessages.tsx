@@ -4,11 +4,11 @@ import { useCollectionData } from "react-firebase-hooks/firestore";
 
 import { db } from "@/firebase/config";
 
-import { chatProps } from "@/utils/types";
+import { ChatProps } from "@/types";
 
 import { Message } from "@/components/Message";
 
-export const ChatMessages = ({ scrollRef, id, chatType }: chatProps) => {
+export const ChatMessages = ({ scrollRef, id, chatType }: ChatProps) => {
   const [values] = useCollectionData(
     query(
       collection(db, `${chatType}`, id, "messages"),
