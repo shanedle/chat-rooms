@@ -190,7 +190,7 @@ export const Auth = () => {
             </Flex>
             <Flex mt="15px">
               <Text fontSize="sm">
-                {signUp ? "Have An Account?" : "Don't have a account?"}{" "}
+                {signUp ? "Already have an account?" : "Don't have an account?"}{" "}
               </Text>
               <Text
                 onClick={() => setSignUp(!signUp)}
@@ -200,7 +200,7 @@ export const Auth = () => {
                 fontSize="sm"
                 ml="5px"
               >
-                {signUp ? "Sign In" : "Create Account"}
+                {signUp ? "Sign in" : "Sign up"}
               </Text>
             </Flex>
           </>
