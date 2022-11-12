@@ -16,6 +16,7 @@ import {
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signInAnonymously,
   signInWithPopup,
   signInWithRedirect,
 } from "firebase/auth";
@@ -52,11 +53,9 @@ export const Auth = () => {
   };
 
   const guestSignIn = () => {
-    signInWithEmailAndPassword(auth, "guest@chatrooms.com", "guest12345").catch(
-      (error) => {
-        console.log(error.message);
-      }
-    );
+    signInAnonymously(auth).catch((error) => {
+      console.log(error.message);
+    });
   };
 
   const createUser = () => {

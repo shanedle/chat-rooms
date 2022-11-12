@@ -33,6 +33,9 @@ const DirectMessageHeader = ({ chatData, user }: ChatHeaderProps) => {
 
   const headingName = foundUser?.length ? foundUser?.[0]?.email : filtered;
 
+  // TODO LIST: Change this line of code
+  const headingNameCheck = headingName === null ? "Guest User" : headingName;
+
   const timeAgo = foundUser?.length
     ? `Active ${formatDistanceToNowStrict(
         new Date(foundUser?.[0].lastActive.toDate())
@@ -74,7 +77,7 @@ const DirectMessageHeader = ({ chatData, user }: ChatHeaderProps) => {
         />
       )}
       <Box maxWidth="70%">
-        <Heading size="md">{headingName}</Heading>
+        <Heading size="md">{headingNameCheck}</Heading>
         <Text>{timeAgo}</Text>
       </Box>
     </Flex>
