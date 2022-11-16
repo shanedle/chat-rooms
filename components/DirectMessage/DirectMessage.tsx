@@ -4,7 +4,7 @@ import { collection, query, where } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 
-import { auth, db } from "@/firebase/config";
+import { auth, db } from "@/lib/firebase";
 
 import { DirectMessageProps } from "@/types";
 

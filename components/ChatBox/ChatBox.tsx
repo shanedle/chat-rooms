@@ -4,7 +4,7 @@ import { IoSend } from "react-icons/io5";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-import { auth, db } from "@/firebase/config";
+import { auth, db } from "@/lib/firebase";
 
 import { ChatProps } from "@/types";
 

@@ -26,7 +26,7 @@ import {
 } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-import { auth, db } from "@/firebase/config";
+import { auth, db } from "@/lib/firebase";
 
 import { ChatModalProps } from "@/types";
 

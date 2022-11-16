@@ -5,7 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useDocumentData } from "react-firebase-hooks/firestore";
 import { Flex, useMediaQuery } from "@chakra-ui/react";
 
-import { auth, db } from "@/firebase/config";
+import { auth, db } from "@/lib/firebase";
 
 import RoomsHeader from "@/components/ChatRoom/RoomsHeader";
 import { ChatMessages } from "@/components/ChatMessages";

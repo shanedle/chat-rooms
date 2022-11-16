@@ -14,7 +14,7 @@ import { formatDistanceToNowStrict } from "date-fns";
 import { collection, query, where } from "firebase/firestore";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 
-import { db } from "@/firebase/config";
+import { db } from "@/lib/firebase";
 
 import { ChatHeaderProps } from "@/types";
 

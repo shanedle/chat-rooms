@@ -14,7 +14,7 @@ import { collection, query, where } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollection } from "react-firebase-hooks/firestore";
 
-import { auth, db } from "@/firebase/config";
+import { auth, db } from "@/lib/firebase";
 
 import ChatRooms from "@/components/ChatRoom";
 import DirectMessage from "@/components/DirectMessage";

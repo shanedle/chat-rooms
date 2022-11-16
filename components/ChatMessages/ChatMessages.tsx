@@ -2,7 +2,7 @@ import { Flex } from "@chakra-ui/react";
 import { collection, orderBy, query } from "firebase/firestore";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 
-import { db } from "@/firebase/config";
+import { db } from "@/lib/firebase";
 
 import { ChatProps } from "@/types";
 

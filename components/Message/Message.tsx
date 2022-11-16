@@ -1,7 +1,7 @@
 import { Flex, Avatar, Box, Text, useColorMode } from "@chakra-ui/react";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-import { auth } from "@/firebase/config";
+import { auth } from "@/lib/firebase";
 
 import { MessageProps } from "@/types";
 

@@ -5,7 +5,7 @@ import { doc } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useDocumentData } from "react-firebase-hooks/firestore";
 
-import { auth, db } from "@/firebase/config";
+import { auth, db } from "@/lib/firebase";
 
 import DirectMessageHeader from "@/components/DirectMessage/DirectMessageHeader";
 import { ChatMessages } from "@/components/ChatMessages";

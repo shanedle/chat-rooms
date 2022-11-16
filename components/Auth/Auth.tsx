@@ -21,7 +21,7 @@ import {
   signInWithRedirect,
 } from "firebase/auth";
 
-import { auth, provider } from "@/firebase/config";
+import { auth, provider } from "@/lib/firebase";
 
 import { ThemeToggleButton } from "@/components/ThemeToggleButton";
 

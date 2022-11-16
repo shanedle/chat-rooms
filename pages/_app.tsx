@@ -4,7 +4,7 @@ import { Center, ChakraProvider, Spinner } from "@chakra-ui/react";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-import { auth, db } from "@/firebase/config";
+import { auth, db } from "@/lib/firebase";
 
 import theme from "@/lib/theme";
 
