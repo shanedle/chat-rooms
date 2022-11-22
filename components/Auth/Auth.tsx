@@ -105,7 +105,7 @@ export const Auth = () => {
             size="lg"
             textAlign="center"
           >
-            Chat Rooms
+            Let's Chat
           </Heading>
           <Input
             type="text"
@@ -129,39 +129,25 @@ export const Auth = () => {
           />
 
           <>
-            <Flex
-              w="100%"
-              mt="10px"
-              mb="10px"
-              justify={signUp ? "center" : "space-between"}
-            >
+            <Flex w="100%" mt="10px" mb="10px" justify="center">
               {signUp ? (
                 <Button
                   onClick={createUser}
                   borderRadius="20px"
-                  w="70%"
-                  size="md"
+                  w="100%"
+                  size={{ base: "sm", md: "md" }}
                 >
                   Sign Up
                 </Button>
               ) : (
                 <>
                   <Button
-                    mx="10px"
                     onClick={emailAndPasswordSignIn}
                     borderRadius="20px"
-                    w="50%"
-                    size="sm"
+                    w="100%"
+                    size={{ base: "sm", md: "md" }}
                   >
                     Sign In
-                  </Button>
-                  <Button
-                    onClick={guestSignIn}
-                    borderRadius="20px"
-                    w="50%"
-                    size="sm"
-                  >
-                    Guest Sign In
                   </Button>
                 </>
               )}
@@ -172,21 +158,31 @@ export const Auth = () => {
               <Divider />
             </Stack>
             <Flex
-              p="5px"
-              borderRadius="10px"
-              alignItems="center"
-              onClick={googleSignIn}
-              borderBottom="20px"
-              _hover={{
-                shadow:
-                  "5px 5px 3px -1px rgb(0 0 0 / 20%), -3px -3px 3px -1px rgb(0 0 0 / 20%)",
-              }}
-              cursor="pointer"
-              boxSizing="border-box"
+              w="100%"
+              mt="10px"
+              mb="10px"
+              gap="4"
+              direction={{ base: "column", md: "row" }}
             >
-              <Icon mr="5px" w="25px" h="25px" as={IoLogoGoogle} />
-              <Text fontSize="sm">Sign In With Google</Text>
+              <Button
+                onClick={googleSignIn}
+                leftIcon={<IoLogoGoogle />}
+                borderRadius="20px"
+                w="100%"
+                size={{ base: "sm", md: "md" }}
+              >
+                Sign in with Google
+              </Button>
+              <Button
+                onClick={guestSignIn}
+                borderRadius="20px"
+                w="100%"
+                size={{ base: "sm", md: "md" }}
+              >
+                Sign in as Guest
+              </Button>
             </Flex>
+
             <Flex mt="15px">
               <Text fontSize="sm">
                 {signUp ? "Already have an account?" : "Don't have an account?"}{" "}
