@@ -1,5 +1,5 @@
 {
-  "name": "chat-rooms",
+  "name": "lets-chat",
   "private": true,
   "scripts": {
     "dev": "next dev",
