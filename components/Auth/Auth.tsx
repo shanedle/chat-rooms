@@ -6,13 +6,18 @@ import {
   Flex,
   Heading,
   Image,
-  Icon,
   Input,
+  InputRightElement,
+  InputGroup,
   Stack,
   Text,
   useColorMode,
   useMediaQuery,
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
 } from "@chakra-ui/react";
+import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -35,6 +40,9 @@ export const Auth = () => {
   const [email, setEmail] = useState("");
   const [password, setPass] = useState("");
   const [signUp, setSignUp] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleClick = () => setShowPassword(!showPassword);
 
   const googleSignIn = () => {
     isMobile
@@ -107,27 +115,31 @@ export const Auth = () => {
           >
             Let's Chat
           </Heading>
-          <Input
-            type="text"
-            name="email"
-            onChange={handleChange}
-            size={isMobile ? "md" : "lg"}
-            placeholder="Email"
-            variant="flushed"
-            height="2rem"
-            mb="10px"
-          />
-          <Input
-            type="password"
-            name="pass"
-            onChange={handleChange}
-            size={isMobile ? "md" : "lg"}
-            placeholder="Password"
-            variant="flushed"
-            height="2rem"
-            mb="10px"
-          />
-
+          <FormControl>
+            <FormLabel>Email</FormLabel>
+            <Input
+              type="text"
+              name="email"
+              onChange={handleChange}
+              size={isMobile ? "md" : "lg"}
+              mb="10px"
+            />
+          </FormControl>
+          <FormControl>
+            <FormLabel>Password</FormLabel>
+            <InputGroup size={isMobile ? "md" : "lg"} mb="10px">
+              <Input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                onChange={handleChange}
+              />
+              <InputRightElement width="4rem">
+                <Button h="2rem" size="sm" onClick={handleClick}>
+                  {showPassword ? <ViewOffIcon /> : <ViewIcon />}
+                </Button>
+              </InputRightElement>
+            </InputGroup>
+          </FormControl>
           <>
             <Flex w="100%" mt="10px" mb="10px" justify="center">
               {signUp ? (
