@@ -17,5 +17,3 @@ yarn dev
 - [TypeScript](https://www.typescriptlang.org/docs/)
 - [Firebase](https://firebase.google.com/docs)
 - [Chakra UI](https://chakra-ui.com/getting-started)
-
-DEAD PROJECT
