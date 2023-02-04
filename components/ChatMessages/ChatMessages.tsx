@@ -4,7 +4,7 @@ import { useCollectionData } from "react-firebase-hooks/firestore";
 
 import { db } from "@/lib/firebase";
 
-import { ChatProps } from "@/types";
+import { Chat as ChatProps } from "@/types";
 
 import { Message } from "@/components/Message";
 

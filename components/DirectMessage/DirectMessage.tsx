@@ -6,7 +6,7 @@ import { useCollectionData } from "react-firebase-hooks/firestore";
 
 import { auth, db } from "@/lib/firebase";
 
-import { DirectMessageProps } from "@/types";
+import { DirectMessage as DirectMessageProps } from "@/types";
 
 const ChatRooms = ({ users, id }: DirectMessageProps) => {
   const [user] = useAuthState(auth);

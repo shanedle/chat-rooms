@@ -10,7 +10,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 import { auth } from "@/lib/firebase";
 
-import { ChatRoomProps } from "@/types";
+import { ChatRoom as ChatRoomProps } from "@/types";
 
 const ChatRooms = ({ data, id }: ChatRoomProps) => {
   const [user] = useAuthState(auth);

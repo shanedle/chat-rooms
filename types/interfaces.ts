@@ -1,35 +1,35 @@
 import { UserInfo } from "firebase/auth";
 import { DocumentData, Timestamp } from "firebase/firestore";
 
-export type MessageProps = {
+export interface Message {
   id: string;
   message: string;
   //createdAt: Timestamp;
   photoURL?: string;
-};
+}
 
-export type ChatProps = {
+export interface Chat {
   id: string;
   chatType: string;
   scrollRef?: any;
-};
+}
 
-export type ChatModalProps = {
+export interface ChatModal {
   type: "room" | "chat" | "addPerson";
   title: string;
-};
+}
 
-export type ChatHeaderProps = {
+export interface ChatHeader {
   chatData: DocumentData;
   user: UserInfo;
-};
+}
 
-export type ChatRoomProps = {
+export interface ChatRoom {
   id: string;
   data: DocumentData;
-};
+}
 
-export type DirectMessageProps = {
+export interface DirectMessage {
   id: string;
   users: string[];
-};
+}

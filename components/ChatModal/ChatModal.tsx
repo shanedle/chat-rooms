@@ -28,7 +28,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 import { auth, db } from "@/lib/firebase";
 
-import { ChatModalProps } from "@/types";
+import { ChatModal as ChatModalProps } from "@/types";
 
 export const ChatModal = ({ type, title }: ChatModalProps) => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");

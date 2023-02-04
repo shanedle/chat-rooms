@@ -16,7 +16,7 @@ import { useCollectionData } from "react-firebase-hooks/firestore";
 
 import { db } from "@/lib/firebase";
 
-import { ChatHeaderProps } from "@/types";
+import { ChatHeader as ChatHeaderProps } from "@/types";
 
 const DirectMessageHeader = ({ chatData, user }: ChatHeaderProps) => {
   const [isMobile] = useMediaQuery("(max-width: 680px)");

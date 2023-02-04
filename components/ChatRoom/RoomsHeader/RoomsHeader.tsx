@@ -13,7 +13,7 @@ import {
 import { IoArrowBack } from "react-icons/io5";
 import { formatDistanceToNowStrict } from "date-fns";
 
-import { ChatHeaderProps } from "@/types";
+import { ChatHeader as ChatHeaderProps } from "@/types";
 
 import { ChatModal } from "@/components/ChatModal";
 

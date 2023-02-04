@@ -3,7 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 import { auth } from "@/lib/firebase";
 
-import { MessageProps } from "@/types";
+import { Message as MessageProps } from "@/types";
 
 export const Message = ({ message, photoURL, id }: MessageProps) => {
   const { colorMode } = useColorMode();
