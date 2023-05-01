@@ -1,5 +1,5 @@
 # Let's Chat
-Welcome to Let's Chat! Let's Chat was designed and built with the latest technologies to provide users with an intuitive and modern messaging experience. Whether you're chatting with friends, family, or colleagues, this app has everything you need to stay connected. Join chatrooms, send private messages, and stay in sync with real-time messaging - all with a sleek and responsive UI.
+Let's Chat is a real-time chat web app built with Next.js, Firebase, and Chakra UI. It enables seamless communication between users, providing a modern and responsive user interface. Join chat rooms, connect with friends and colleagues, and engage in real-time conversations. Try it out today!
 
 ## Features
 - Real-time messaging: Stay in sync with your friends and colleagues with instant messaging.
